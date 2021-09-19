@@ -11,7 +11,7 @@ libvector.so: $(SOURCE)
 	$(CC) -shared -fpic -o libvector.so $(SOURCE)
 
 prog21: libvector.so main2.c
-	gcc -o prog21 main2.c ./libvector.so
+	$(CC) -o prog21 main2.c ./libvector.so
 
 clean:
 	rm libvector.so

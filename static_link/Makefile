@@ -14,7 +14,7 @@ libvector.a: $(OBJ)
 	ar rcs libvector.a $(OBJ)
 
 prog2: libvector.a main2.o
-	gcc -static -o prog2 main2.o $(LIB_PATH) $(LIB)
+	$(CC) -static -o prog2 main2.o $(LIB_PATH) $(LIB)
 
 clean:
 	rm libvector.a

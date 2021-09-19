@@ -11,7 +11,7 @@ libvector.so: $(SOURCE)
 	$(CC) -shared -fpic -o libvector.so $(SOURCE)
 
 prog2r: main2.c
-	gcc -rdynamic -o prog2r main2.c -ldl
+	$(CC) -rdynamic -o prog2r main2.c -ldl
 
 clean:
 	rm libvector.so
